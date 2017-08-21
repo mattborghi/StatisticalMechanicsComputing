@@ -1,0 +1,350 @@
+Question 2 
+-----------
+Considering this algorithm, which of the below statements is correct:
+
+a) For L=3, the final configuration for t_max = 1000 is always different from the initial configuration.
+
+b) For L=6, the algorithm satisfies global balance.
+
+c) For L=7, the final configuration for t_max = 1000 can be any of the 49 configurations.
+
+a and b are correct.
+
+*b and c are correct.
+
+c and a are correct.
+
+Question 3
+----------
+Considering this algorithm, which of the below statements is correct:
+
+a) For epsilon = 1/2 and for any L, this algorithm satisfies detailed balance.
+
+b) For L = 4 and epsilon = 1/2, this algorithm can reach any of the 16 configurations at t_max = 1000.
+
+c) For L = 5 and epsilon = 1, this algorithm satisfies ergodicity.
+
+*a and b are correct.
+
+b and c are correct.
+
+Question 4
+----------
+Which of the below statements is correct:
+
+a) Algorithm 1 implements a direct-sampling algorithm (at every step an independent permutation is sampled).
+
+b) The two algorithms, in the limit of large nsteps, uniformly sample permutations of N elements (that is, any permutation appears with the same probability).
+
+c) Algorithm 2 prints nsteps independent random integers between 0 and (N - 1).
+
+a and b are correct.
+
+*b and c are correct.
+
+a and c are correct.
+
+Question 5
+----------
+Which of the below statements is correct:
+
+*a) In the limit of infinite nsteps, the probability that L[0] is equal to its initial value (L[0] = 0) is 1 / N.
+
+b) For nsteps = 1, the probability that L[0] is equal to its initial value (L[0] = 0) is
+
+   1 - 2 * (N - 1) / N ** 2.
+
+c) For nsteps even and very large, only half of the permutations can be reached.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 6
+----------
+Consider two probability distributions p1(x) and p2(x) (not necessarily normalized) such that p2(x)>=p1(x) for any x.
+
+Which of the above algorithms sample the distribution p1(x)?
+
+a) Algorithm 1 produces samples x distributed as p1(x).
+
+b) Algorithm 2 produces samples x distributed as p1(x).
+
+*c) Algorithm 3 produces samples x distributed as p1(x).
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 7
+----------
+Consider a pebble moving on a one-dimensional lattice of L sites (namely sites 0, 1, ..., L - 1), with hard walls (no periodic boundary conditions).
+
+Which of the below statements is correct:
+
+
+a) For |b| < 1/L, the algorithm satisfies detailed balance for the homogeneous probability distribution, and the long-time probability of being in each site tends to 1/L.
+
+*b) For b = 0 and L = 9, the long-time probability of being in each site tends to 1/L.
+
+c) For b = -1/2, the algorithm is ergodic.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 8
+----------
+Consider two hard disks in one dimension, with radius sigma=0.15 (i.e. two clothes-pins of width 2*sigma=0.3), lying on a segment of length 1 with hard walls (without periodic boundary conditions).
+
+A configuration is specified by the positions x1 and x2 of the two centers, and it is "legal" if:
+
+1\ the distance between the two centers is larger than 2*sigma,
+
+2\ the distance of any center from the walls (x = 0 and x = 1) is larger than sigma.
+
+All legal configurations are equiprobable, and all illegal configurations have zero probability.
+
+Here are three functions that return a configuration [x1, x2].
+
+Which of the following statements is correct:
+
+
+a) A1 samples legal and equiprobable configurations of two clothes-pins.
+
+b) A2 implements a direct-sampling algorithm for the uniform distribution of clothes-pins.
+
+*c) A3 implements a direct-sampling algorithm for the uniform distribution of clothes-pins.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 9
+----------
+Consider one pebble moving on L sites (from 0 to L - 1), with the potential
+
+    V(site) = sin((site + 1) * 0.2) / sqrt((site + 1) * 0.2)
+on all sites. The potential V is represented in the below figure:
+Here are two algorithms which try to minimize the potential V by simulated annealing.
+
+Which of the below statements is correct:
+
+
+a) Algorithm 1 only accepts moves to configurations of lower energy.
+
+b) At infinite beta (approximated by beta = 1000000000), both algorithms can get "stuck" (for infinite beta_max) in a site which is not a global minimum, but only a local minimum.
+
+*c) In both algorithms, the acceptance probability of moves that increase V becomes smaller when beta increases.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 10
+-----------
+Consider four hard disks of radius sigma=0.1, in a two-dimensional square box with sides equal to 1, and with hard walls. Any 'legal' configuration presents no overlap between disks, and no overlap between a disk and a wall.
+
+The following program implements a Markov-chain Monte Carlo algorithm to sample legal configurations (all with the same statistical weight, according to the equiprobability principle):
+
+Which of the below statements is correct:
+
+
+a) The acceptance ratio (i.e. the number of accepted moves divided by the number of steps) is independent of the choice of delta.
+
+b) For delta > 2.0, the algorithm does not sample equiprobable legal configurations, in the limit of n_steps going to infinity.
+
+*c) For delta = 0.001, the algorithm samples equiprobable legal configurations in the limit of n_steps going to infinity.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 11
+-----------
+
+Consider two spins (sigma0 and sigma1) taking values equal to +1 or -1. The energy of a configuration sigma=[sigma0, sigma1] reads:
+The following Markov-chain Monte Carlo program samples configurations of the two spins with probability proportional to exp(-beta * E).
+
+Which of the following statements is correct (consider beta = 1):
+
+
+a) For J = 0.0, all moves are rejected.
+
+b) For h = 1.0 and J very large and positive, the most probable configuration has the two spins pointing in opposite directions.
+
+*c) For J = 1.0 and h very large and positive, the average magnetization (sigma0 + sigma1) / 2. tends to 1.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
+
+Question 12
+-----------
+
+Consider five spins taking values +1 or -1 on a one-dimensional lattice.
+
+Replace the standard Ising-model energy of a configuration S with the following:
+
+def energy(S):
+    E = S[0] * S[1] - S[1] * S[2] + S[2] * S[3] + S[3] * S[4] - S[4] * S[0]
+    return E
+This model has ten different ground states (configurations with the minimum possible energy E = -3), which are:
+
+S = [-1, -1, -1, 1, -1]
+
+S = [-1, 1, -1, 1, -1]
+
+S = [-1, 1, 1, -1, -1]
+
+S = [-1, 1, 1, -1, 1]
+
+S = [-1, 1, 1, 1, -1]
+
+S = [1, -1, -1, -1, 1]
+
+S = [1, -1, -1, 1, -1]
+
+S = [1, -1, -1, 1, 1]
+
+S = [1, -1, 1, -1, 1]
+
+S = [1, 1, 1, -1, 1]
+
+Below is an implementation of the local Metropolis algorithm for this system (at inverse temperature beta), in which the flip of spin S[k] is accepted or rejected with the usual Metropolis rule:
+
+Which of the below statements is correct:
+
+
+a) For beta = 0.0, the probabilities of any of the 10 ground-states (in the limit of large nsteps) are all equal.
+
+b) For infinite beta (zero temperature), the acceptance ratio of the algorithm is zero.
+
+c) For infinite beta (zero temperature), the probabilities of any of the 10 ground-states (in the limit of large nsteps) are all equal.
+
+a and b are correct.
+
+b and c are correct.
+
+*a and c are correct.
+
+Question 13
+-----------
+Consider a one-dimensional Ising model of L sites with periodic boundary conditions, defined by the energy:
+
+    E(S) = -J * (S[0] * S[1] + S[1] * S[2] + ... + S[L - 2] * S[L - 1] + S[L - 1] * S[0])
+for a configuration S, with statistical weight proportional to exp(-beta * E(S)).
+
+Consider the following two algorithms to sample a configuration S:
+
+Which of the below statements is correct:
+
+
+a) Algorithm A samples configurations S from exp(-beta * E(S)).
+
+b) Algorithm B samples configurations S from exp(-beta * E(S)).
+
+c) At infinite temperature (beta = 0.0), algorithms A and B produce statistically equivalent configurations.
+
+a and b are correct.
+
+*b and c are correct.
+
+a and c are correct.
+
+Question 14
+-----------
+
+
+Consider a system of two energy levels, with energies:
+
+E0 = 0
+E1 = 1
+Consider N non-interacting bosons which can populate these two levels,
+
+as shown in the below figure for N = 5:
+
+Which of the below statements is correct:
+
+
+a) For any N, the partition function reads
+
+Z = 1 + exp(-beta) + exp(-2 * beta) + ... + exp(-N * beta)
+
+b) For N = 2, the partition function reads
+
+Z = 1 + 2 * exp(-beta) + exp(-2 * beta)
+
+c) For N = 1, the partition function reads
+
+Z = 1 + exp(-beta)
+
+a and b are correct.
+
+*b and c are correct.
+
+a and c are correct.
+
+Question 15
+-----------
+
+The following function constructs a single-particle path in free space (at inverse temperature beta, and with imaginary-time discretization step equal to beta/N), and returns the final point (i.e. the position at imaginary time equal to beta, after N steps).
+
+The path is always set to start at the origin (see line "xprev = 0.0").
+
+def sample_final_point(beta, N):
+    sigma = math.sqrt(beta / float(N))
+    xprev = 0.0
+    for i in range(N):
+        xnext = random.gauss(xprev, sigma)
+        xprev = xnext
+    return xnext
+The output of this function is distributed according to a probability distribution p_N(x).
+
+Which of the below statements is correct:
+
+
+a) p_N(x) depends on N; only in the limit N going to infinity, p_N(x) is a Gaussian distribution.
+
+b) p_N(x) is in fact independent of N, it is the same Gaussian distribution for N = 1 and N = 99.
+
+c) The standard deviation of p_N(x) (the width of the distribution) is proportional to beta, as was discovered by Richard Feynman
+
+a and c are correct.
+
+*b and c are correct.
+
+Question 16
+-----------
+Consider the path-integral representation of a single quantum particle in free space in one dimension, at inverse temperature beta, and with imaginary-time discretization tau = beta / N.
+
+Consider the following three algorithms:
+
+Which of the below statements is correct:
+
+
+a) Algorithm 2 is a direct-sampling algorithm, because the new configuration does not depend on the previous one.
+
+b) Algorithm 3 is incorrect, because it does not include rejections.
+
+*c) In Algorithm 1, at most one position is updated at each step.
+
+a and b are correct.
+
+b and c are correct.
+
+a and c are correct.
